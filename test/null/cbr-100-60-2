@@ -1,0 +1,906 @@
+#
+# nodes: 100, max conn: 60, send rate: 0.5, seed: 1
+#
+#
+# 1 connecting to 2 at time 2.5568388786897245
+#
+set udp_(0) [new Agent/UDP]
+$ns_ attach-agent $node_(1) $udp_(0)
+set null_(0) [new Agent/Null]
+$ns_ attach-agent $node_(2) $null_(0)
+set cbr_(0) [new Application/Traffic/CBR]
+$cbr_(0) set packetSize_ 512
+$cbr_(0) set interval_ 0.5
+$cbr_(0) set random_ 1
+$cbr_(0) set maxpkts_ 10000
+$cbr_(0) attach-agent $udp_(0)
+$ns_ connect $udp_(0) $null_(0)
+$ns_ at 2.5568388786897245 "$cbr_(0) start"
+#
+# 4 connecting to 5 at time 56.333118917575632
+#
+set udp_(1) [new Agent/UDP]
+$ns_ attach-agent $node_(4) $udp_(1)
+set null_(1) [new Agent/Null]
+$ns_ attach-agent $node_(5) $null_(1)
+set cbr_(1) [new Application/Traffic/CBR]
+$cbr_(1) set packetSize_ 512
+$cbr_(1) set interval_ 0.5
+$cbr_(1) set random_ 1
+$cbr_(1) set maxpkts_ 10000
+$cbr_(1) attach-agent $udp_(1)
+$ns_ connect $udp_(1) $null_(1)
+$ns_ at 56.333118917575632 "$cbr_(1) start"
+#
+# 4 connecting to 6 at time 146.96568928983328
+#
+set udp_(2) [new Agent/UDP]
+$ns_ attach-agent $node_(4) $udp_(2)
+set null_(2) [new Agent/Null]
+$ns_ attach-agent $node_(6) $null_(2)
+set cbr_(2) [new Application/Traffic/CBR]
+$cbr_(2) set packetSize_ 512
+$cbr_(2) set interval_ 0.5
+$cbr_(2) set random_ 1
+$cbr_(2) set maxpkts_ 10000
+$cbr_(2) attach-agent $udp_(2)
+$ns_ connect $udp_(2) $null_(2)
+$ns_ at 146.96568928983328 "$cbr_(2) start"
+#
+# 6 connecting to 7 at time 55.634230382570173
+#
+set udp_(3) [new Agent/UDP]
+$ns_ attach-agent $node_(6) $udp_(3)
+set null_(3) [new Agent/Null]
+$ns_ attach-agent $node_(7) $null_(3)
+set cbr_(3) [new Application/Traffic/CBR]
+$cbr_(3) set packetSize_ 512
+$cbr_(3) set interval_ 0.5
+$cbr_(3) set random_ 1
+$cbr_(3) set maxpkts_ 10000
+$cbr_(3) attach-agent $udp_(3)
+$ns_ connect $udp_(3) $null_(3)
+$ns_ at 55.634230382570173 "$cbr_(3) start"
+#
+# 7 connecting to 8 at time 29.546173154165118
+#
+set udp_(4) [new Agent/UDP]
+$ns_ attach-agent $node_(7) $udp_(4)
+set null_(4) [new Agent/Null]
+$ns_ attach-agent $node_(8) $null_(4)
+set cbr_(4) [new Application/Traffic/CBR]
+$cbr_(4) set packetSize_ 512
+$cbr_(4) set interval_ 0.5
+$cbr_(4) set random_ 1
+$cbr_(4) set maxpkts_ 10000
+$cbr_(4) attach-agent $udp_(4)
+$ns_ connect $udp_(4) $null_(4)
+$ns_ at 29.546173154165118 "$cbr_(4) start"
+#
+# 7 connecting to 9 at time 7.7030203154790309
+#
+set udp_(5) [new Agent/UDP]
+$ns_ attach-agent $node_(7) $udp_(5)
+set null_(5) [new Agent/Null]
+$ns_ attach-agent $node_(9) $null_(5)
+set cbr_(5) [new Application/Traffic/CBR]
+$cbr_(5) set packetSize_ 512
+$cbr_(5) set interval_ 0.5
+$cbr_(5) set random_ 1
+$cbr_(5) set maxpkts_ 10000
+$cbr_(5) attach-agent $udp_(5)
+$ns_ connect $udp_(5) $null_(5)
+$ns_ at 7.7030203154790309 "$cbr_(5) start"
+#
+# 8 connecting to 9 at time 20.48548468411224
+#
+set udp_(6) [new Agent/UDP]
+$ns_ attach-agent $node_(8) $udp_(6)
+set null_(6) [new Agent/Null]
+$ns_ attach-agent $node_(9) $null_(6)
+set cbr_(6) [new Application/Traffic/CBR]
+$cbr_(6) set packetSize_ 512
+$cbr_(6) set interval_ 0.5
+$cbr_(6) set random_ 1
+$cbr_(6) set maxpkts_ 10000
+$cbr_(6) attach-agent $udp_(6)
+$ns_ connect $udp_(6) $null_(6)
+$ns_ at 20.48548468411224 "$cbr_(6) start"
+#
+# 9 connecting to 10 at time 76.258212521792487
+#
+set udp_(7) [new Agent/UDP]
+$ns_ attach-agent $node_(9) $udp_(7)
+set null_(7) [new Agent/Null]
+$ns_ attach-agent $node_(10) $null_(7)
+set cbr_(7) [new Application/Traffic/CBR]
+$cbr_(7) set packetSize_ 512
+$cbr_(7) set interval_ 0.5
+$cbr_(7) set random_ 1
+$cbr_(7) set maxpkts_ 10000
+$cbr_(7) attach-agent $udp_(7)
+$ns_ connect $udp_(7) $null_(7)
+$ns_ at 76.258212521792487 "$cbr_(7) start"
+#
+# 9 connecting to 11 at time 31.464945688594575
+#
+set udp_(8) [new Agent/UDP]
+$ns_ attach-agent $node_(9) $udp_(8)
+set null_(8) [new Agent/Null]
+$ns_ attach-agent $node_(11) $null_(8)
+set cbr_(8) [new Application/Traffic/CBR]
+$cbr_(8) set packetSize_ 512
+$cbr_(8) set interval_ 0.5
+$cbr_(8) set random_ 1
+$cbr_(8) set maxpkts_ 10000
+$cbr_(8) attach-agent $udp_(8)
+$ns_ connect $udp_(8) $null_(8)
+$ns_ at 31.464945688594575 "$cbr_(8) start"
+#
+# 11 connecting to 12 at time 62.77338456491632
+#
+set udp_(9) [new Agent/UDP]
+$ns_ attach-agent $node_(11) $udp_(9)
+set null_(9) [new Agent/Null]
+$ns_ attach-agent $node_(12) $null_(9)
+set cbr_(9) [new Application/Traffic/CBR]
+$cbr_(9) set packetSize_ 512
+$cbr_(9) set interval_ 0.5
+$cbr_(9) set random_ 1
+$cbr_(9) set maxpkts_ 10000
+$cbr_(9) attach-agent $udp_(9)
+$ns_ connect $udp_(9) $null_(9)
+$ns_ at 62.77338456491632 "$cbr_(9) start"
+#
+# 11 connecting to 13 at time 46.455830739092008
+#
+set udp_(10) [new Agent/UDP]
+$ns_ attach-agent $node_(11) $udp_(10)
+set null_(10) [new Agent/Null]
+$ns_ attach-agent $node_(13) $null_(10)
+set cbr_(10) [new Application/Traffic/CBR]
+$cbr_(10) set packetSize_ 512
+$cbr_(10) set interval_ 0.5
+$cbr_(10) set random_ 1
+$cbr_(10) set maxpkts_ 10000
+$cbr_(10) attach-agent $udp_(10)
+$ns_ connect $udp_(10) $null_(10)
+$ns_ at 46.455830739092008 "$cbr_(10) start"
+#
+# 13 connecting to 14 at time 83.900868549896813
+#
+set udp_(11) [new Agent/UDP]
+$ns_ attach-agent $node_(13) $udp_(11)
+set null_(11) [new Agent/Null]
+$ns_ attach-agent $node_(14) $null_(11)
+set cbr_(11) [new Application/Traffic/CBR]
+$cbr_(11) set packetSize_ 512
+$cbr_(11) set interval_ 0.5
+$cbr_(11) set random_ 1
+$cbr_(11) set maxpkts_ 10000
+$cbr_(11) attach-agent $udp_(11)
+$ns_ connect $udp_(11) $null_(11)
+$ns_ at 83.900868549896813 "$cbr_(11) start"
+#
+# 14 connecting to 15 at time 155.17211061677529
+#
+set udp_(12) [new Agent/UDP]
+$ns_ attach-agent $node_(14) $udp_(12)
+set null_(12) [new Agent/Null]
+$ns_ attach-agent $node_(15) $null_(12)
+set cbr_(12) [new Application/Traffic/CBR]
+$cbr_(12) set packetSize_ 512
+$cbr_(12) set interval_ 0.5
+$cbr_(12) set random_ 1
+$cbr_(12) set maxpkts_ 10000
+$cbr_(12) attach-agent $udp_(12)
+$ns_ connect $udp_(12) $null_(12)
+$ns_ at 155.17211061677529 "$cbr_(12) start"
+#
+# 15 connecting to 16 at time 39.088702704333095
+#
+set udp_(13) [new Agent/UDP]
+$ns_ attach-agent $node_(15) $udp_(13)
+set null_(13) [new Agent/Null]
+$ns_ attach-agent $node_(16) $null_(13)
+set cbr_(13) [new Application/Traffic/CBR]
+$cbr_(13) set packetSize_ 512
+$cbr_(13) set interval_ 0.5
+$cbr_(13) set random_ 1
+$cbr_(13) set maxpkts_ 10000
+$cbr_(13) attach-agent $udp_(13)
+$ns_ connect $udp_(13) $null_(13)
+$ns_ at 39.088702704333095 "$cbr_(13) start"
+#
+# 15 connecting to 17 at time 43.420613009212822
+#
+set udp_(14) [new Agent/UDP]
+$ns_ attach-agent $node_(15) $udp_(14)
+set null_(14) [new Agent/Null]
+$ns_ attach-agent $node_(17) $null_(14)
+set cbr_(14) [new Application/Traffic/CBR]
+$cbr_(14) set packetSize_ 512
+$cbr_(14) set interval_ 0.5
+$cbr_(14) set random_ 1
+$cbr_(14) set maxpkts_ 10000
+$cbr_(14) attach-agent $udp_(14)
+$ns_ connect $udp_(14) $null_(14)
+$ns_ at 43.420613009212822 "$cbr_(14) start"
+#
+# 16 connecting to 17 at time 121.92280978985261
+#
+set udp_(15) [new Agent/UDP]
+$ns_ attach-agent $node_(16) $udp_(15)
+set null_(15) [new Agent/Null]
+$ns_ attach-agent $node_(17) $null_(15)
+set cbr_(15) [new Application/Traffic/CBR]
+$cbr_(15) set packetSize_ 512
+$cbr_(15) set interval_ 0.5
+$cbr_(15) set random_ 1
+$cbr_(15) set maxpkts_ 10000
+$cbr_(15) attach-agent $udp_(15)
+$ns_ connect $udp_(15) $null_(15)
+$ns_ at 121.92280978985261 "$cbr_(15) start"
+#
+# 16 connecting to 18 at time 137.20174070317378
+#
+set udp_(16) [new Agent/UDP]
+$ns_ attach-agent $node_(16) $udp_(16)
+set null_(16) [new Agent/Null]
+$ns_ attach-agent $node_(18) $null_(16)
+set cbr_(16) [new Application/Traffic/CBR]
+$cbr_(16) set packetSize_ 512
+$cbr_(16) set interval_ 0.5
+$cbr_(16) set random_ 1
+$cbr_(16) set maxpkts_ 10000
+$cbr_(16) attach-agent $udp_(16)
+$ns_ connect $udp_(16) $null_(16)
+$ns_ at 137.20174070317378 "$cbr_(16) start"
+#
+# 17 connecting to 18 at time 72.99343390995331
+#
+set udp_(17) [new Agent/UDP]
+$ns_ attach-agent $node_(17) $udp_(17)
+set null_(17) [new Agent/Null]
+$ns_ attach-agent $node_(18) $null_(17)
+set cbr_(17) [new Application/Traffic/CBR]
+$cbr_(17) set packetSize_ 512
+$cbr_(17) set interval_ 0.5
+$cbr_(17) set random_ 1
+$cbr_(17) set maxpkts_ 10000
+$cbr_(17) attach-agent $udp_(17)
+$ns_ connect $udp_(17) $null_(17)
+$ns_ at 72.99343390995331 "$cbr_(17) start"
+#
+# 17 connecting to 19 at time 19.655724884781858
+#
+set udp_(18) [new Agent/UDP]
+$ns_ attach-agent $node_(17) $udp_(18)
+set null_(18) [new Agent/Null]
+$ns_ attach-agent $node_(19) $null_(18)
+set cbr_(18) [new Application/Traffic/CBR]
+$cbr_(18) set packetSize_ 512
+$cbr_(18) set interval_ 0.5
+$cbr_(18) set random_ 1
+$cbr_(18) set maxpkts_ 10000
+$cbr_(18) attach-agent $udp_(18)
+$ns_ connect $udp_(18) $null_(18)
+$ns_ at 19.655724884781858 "$cbr_(18) start"
+#
+# 20 connecting to 21 at time 170.32769159894795
+#
+set udp_(19) [new Agent/UDP]
+$ns_ attach-agent $node_(20) $udp_(19)
+set null_(19) [new Agent/Null]
+$ns_ attach-agent $node_(21) $null_(19)
+set cbr_(19) [new Application/Traffic/CBR]
+$cbr_(19) set packetSize_ 512
+$cbr_(19) set interval_ 0.5
+$cbr_(19) set random_ 1
+$cbr_(19) set maxpkts_ 10000
+$cbr_(19) attach-agent $udp_(19)
+$ns_ connect $udp_(19) $null_(19)
+$ns_ at 170.32769159894795 "$cbr_(19) start"
+#
+# 20 connecting to 22 at time 160.44260791523504
+#
+set udp_(20) [new Agent/UDP]
+$ns_ attach-agent $node_(20) $udp_(20)
+set null_(20) [new Agent/Null]
+$ns_ attach-agent $node_(22) $null_(20)
+set cbr_(20) [new Application/Traffic/CBR]
+$cbr_(20) set packetSize_ 512
+$cbr_(20) set interval_ 0.5
+$cbr_(20) set random_ 1
+$cbr_(20) set maxpkts_ 10000
+$cbr_(20) attach-agent $udp_(20)
+$ns_ connect $udp_(20) $null_(20)
+$ns_ at 160.44260791523504 "$cbr_(20) start"
+#
+# 24 connecting to 25 at time 60.419296464146719
+#
+set udp_(21) [new Agent/UDP]
+$ns_ attach-agent $node_(24) $udp_(21)
+set null_(21) [new Agent/Null]
+$ns_ attach-agent $node_(25) $null_(21)
+set cbr_(21) [new Application/Traffic/CBR]
+$cbr_(21) set packetSize_ 512
+$cbr_(21) set interval_ 0.5
+$cbr_(21) set random_ 1
+$cbr_(21) set maxpkts_ 10000
+$cbr_(21) attach-agent $udp_(21)
+$ns_ connect $udp_(21) $null_(21)
+$ns_ at 60.419296464146719 "$cbr_(21) start"
+#
+# 26 connecting to 27 at time 46.258873029732555
+#
+set udp_(22) [new Agent/UDP]
+$ns_ attach-agent $node_(26) $udp_(22)
+set null_(22) [new Agent/Null]
+$ns_ attach-agent $node_(27) $null_(22)
+set cbr_(22) [new Application/Traffic/CBR]
+$cbr_(22) set packetSize_ 512
+$cbr_(22) set interval_ 0.5
+$cbr_(22) set random_ 1
+$cbr_(22) set maxpkts_ 10000
+$cbr_(22) attach-agent $udp_(22)
+$ns_ connect $udp_(22) $null_(22)
+$ns_ at 46.258873029732555 "$cbr_(22) start"
+#
+# 27 connecting to 28 at time 98.067954088592884
+#
+set udp_(23) [new Agent/UDP]
+$ns_ attach-agent $node_(27) $udp_(23)
+set null_(23) [new Agent/Null]
+$ns_ attach-agent $node_(28) $null_(23)
+set cbr_(23) [new Application/Traffic/CBR]
+$cbr_(23) set packetSize_ 512
+$cbr_(23) set interval_ 0.5
+$cbr_(23) set random_ 1
+$cbr_(23) set maxpkts_ 10000
+$cbr_(23) attach-agent $udp_(23)
+$ns_ connect $udp_(23) $null_(23)
+$ns_ at 98.067954088592884 "$cbr_(23) start"
+#
+# 28 connecting to 29 at time 47.128346453946243
+#
+set udp_(24) [new Agent/UDP]
+$ns_ attach-agent $node_(28) $udp_(24)
+set null_(24) [new Agent/Null]
+$ns_ attach-agent $node_(29) $null_(24)
+set cbr_(24) [new Application/Traffic/CBR]
+$cbr_(24) set packetSize_ 512
+$cbr_(24) set interval_ 0.5
+$cbr_(24) set random_ 1
+$cbr_(24) set maxpkts_ 10000
+$cbr_(24) attach-agent $udp_(24)
+$ns_ connect $udp_(24) $null_(24)
+$ns_ at 47.128346453946243 "$cbr_(24) start"
+#
+# 28 connecting to 30 at time 99.87114126788039
+#
+set udp_(25) [new Agent/UDP]
+$ns_ attach-agent $node_(28) $udp_(25)
+set null_(25) [new Agent/Null]
+$ns_ attach-agent $node_(30) $null_(25)
+set cbr_(25) [new Application/Traffic/CBR]
+$cbr_(25) set packetSize_ 512
+$cbr_(25) set interval_ 0.5
+$cbr_(25) set random_ 1
+$cbr_(25) set maxpkts_ 10000
+$cbr_(25) attach-agent $udp_(25)
+$ns_ connect $udp_(25) $null_(25)
+$ns_ at 99.87114126788039 "$cbr_(25) start"
+#
+# 33 connecting to 34 at time 170.4269140541679
+#
+set udp_(26) [new Agent/UDP]
+$ns_ attach-agent $node_(33) $udp_(26)
+set null_(26) [new Agent/Null]
+$ns_ attach-agent $node_(34) $null_(26)
+set cbr_(26) [new Application/Traffic/CBR]
+$cbr_(26) set packetSize_ 512
+$cbr_(26) set interval_ 0.5
+$cbr_(26) set random_ 1
+$cbr_(26) set maxpkts_ 10000
+$cbr_(26) attach-agent $udp_(26)
+$ns_ connect $udp_(26) $null_(26)
+$ns_ at 170.4269140541679 "$cbr_(26) start"
+#
+# 33 connecting to 35 at time 139.08523271749041
+#
+set udp_(27) [new Agent/UDP]
+$ns_ attach-agent $node_(33) $udp_(27)
+set null_(27) [new Agent/Null]
+$ns_ attach-agent $node_(35) $null_(27)
+set cbr_(27) [new Application/Traffic/CBR]
+$cbr_(27) set packetSize_ 512
+$cbr_(27) set interval_ 0.5
+$cbr_(27) set random_ 1
+$cbr_(27) set maxpkts_ 10000
+$cbr_(27) attach-agent $udp_(27)
+$ns_ connect $udp_(27) $null_(27)
+$ns_ at 139.08523271749041 "$cbr_(27) start"
+#
+# 35 connecting to 36 at time 32.17101298839367
+#
+set udp_(28) [new Agent/UDP]
+$ns_ attach-agent $node_(35) $udp_(28)
+set null_(28) [new Agent/Null]
+$ns_ attach-agent $node_(36) $null_(28)
+set cbr_(28) [new Application/Traffic/CBR]
+$cbr_(28) set packetSize_ 512
+$cbr_(28) set interval_ 0.5
+$cbr_(28) set random_ 1
+$cbr_(28) set maxpkts_ 10000
+$cbr_(28) attach-agent $udp_(28)
+$ns_ connect $udp_(28) $null_(28)
+$ns_ at 32.17101298839367 "$cbr_(28) start"
+#
+# 36 connecting to 37 at time 16.444244867397586
+#
+set udp_(29) [new Agent/UDP]
+$ns_ attach-agent $node_(36) $udp_(29)
+set null_(29) [new Agent/Null]
+$ns_ attach-agent $node_(37) $null_(29)
+set cbr_(29) [new Application/Traffic/CBR]
+$cbr_(29) set packetSize_ 512
+$cbr_(29) set interval_ 0.5
+$cbr_(29) set random_ 1
+$cbr_(29) set maxpkts_ 10000
+$cbr_(29) attach-agent $udp_(29)
+$ns_ connect $udp_(29) $null_(29)
+$ns_ at 16.444244867397586 "$cbr_(29) start"
+#
+# 36 connecting to 38 at time 88.50990661816202
+#
+set udp_(30) [new Agent/UDP]
+$ns_ attach-agent $node_(36) $udp_(30)
+set null_(30) [new Agent/Null]
+$ns_ attach-agent $node_(38) $null_(30)
+set cbr_(30) [new Application/Traffic/CBR]
+$cbr_(30) set packetSize_ 512
+$cbr_(30) set interval_ 0.5
+$cbr_(30) set random_ 1
+$cbr_(30) set maxpkts_ 10000
+$cbr_(30) attach-agent $udp_(30)
+$ns_ connect $udp_(30) $null_(30)
+$ns_ at 88.50990661816202 "$cbr_(30) start"
+#
+# 38 connecting to 39 at time 95.921739365869087
+#
+set udp_(31) [new Agent/UDP]
+$ns_ attach-agent $node_(38) $udp_(31)
+set null_(31) [new Agent/Null]
+$ns_ attach-agent $node_(39) $null_(31)
+set cbr_(31) [new Application/Traffic/CBR]
+$cbr_(31) set packetSize_ 512
+$cbr_(31) set interval_ 0.5
+$cbr_(31) set random_ 1
+$cbr_(31) set maxpkts_ 10000
+$cbr_(31) attach-agent $udp_(31)
+$ns_ connect $udp_(31) $null_(31)
+$ns_ at 95.921739365869087 "$cbr_(31) start"
+#
+# 38 connecting to 40 at time 132.31640266828072
+#
+set udp_(32) [new Agent/UDP]
+$ns_ attach-agent $node_(38) $udp_(32)
+set null_(32) [new Agent/Null]
+$ns_ attach-agent $node_(40) $null_(32)
+set cbr_(32) [new Application/Traffic/CBR]
+$cbr_(32) set packetSize_ 512
+$cbr_(32) set interval_ 0.5
+$cbr_(32) set random_ 1
+$cbr_(32) set maxpkts_ 10000
+$cbr_(32) attach-agent $udp_(32)
+$ns_ connect $udp_(32) $null_(32)
+$ns_ at 132.31640266828072 "$cbr_(32) start"
+#
+# 41 connecting to 42 at time 162.51257573371407
+#
+set udp_(33) [new Agent/UDP]
+$ns_ attach-agent $node_(41) $udp_(33)
+set null_(33) [new Agent/Null]
+$ns_ attach-agent $node_(42) $null_(33)
+set cbr_(33) [new Application/Traffic/CBR]
+$cbr_(33) set packetSize_ 512
+$cbr_(33) set interval_ 0.5
+$cbr_(33) set random_ 1
+$cbr_(33) set maxpkts_ 10000
+$cbr_(33) attach-agent $udp_(33)
+$ns_ connect $udp_(33) $null_(33)
+$ns_ at 162.51257573371407 "$cbr_(33) start"
+#
+# 41 connecting to 43 at time 131.04751890108341
+#
+set udp_(34) [new Agent/UDP]
+$ns_ attach-agent $node_(41) $udp_(34)
+set null_(34) [new Agent/Null]
+$ns_ attach-agent $node_(43) $null_(34)
+set cbr_(34) [new Application/Traffic/CBR]
+$cbr_(34) set packetSize_ 512
+$cbr_(34) set interval_ 0.5
+$cbr_(34) set random_ 1
+$cbr_(34) set maxpkts_ 10000
+$cbr_(34) attach-agent $udp_(34)
+$ns_ connect $udp_(34) $null_(34)
+$ns_ at 131.04751890108341 "$cbr_(34) start"
+#
+# 42 connecting to 43 at time 105.50024639139895
+#
+set udp_(35) [new Agent/UDP]
+$ns_ attach-agent $node_(42) $udp_(35)
+set null_(35) [new Agent/Null]
+$ns_ attach-agent $node_(43) $null_(35)
+set cbr_(35) [new Application/Traffic/CBR]
+$cbr_(35) set packetSize_ 512
+$cbr_(35) set interval_ 0.5
+$cbr_(35) set random_ 1
+$cbr_(35) set maxpkts_ 10000
+$cbr_(35) attach-agent $udp_(35)
+$ns_ connect $udp_(35) $null_(35)
+$ns_ at 105.50024639139895 "$cbr_(35) start"
+#
+# 42 connecting to 44 at time 132.45129531829213
+#
+set udp_(36) [new Agent/UDP]
+$ns_ attach-agent $node_(42) $udp_(36)
+set null_(36) [new Agent/Null]
+$ns_ attach-agent $node_(44) $null_(36)
+set cbr_(36) [new Application/Traffic/CBR]
+$cbr_(36) set packetSize_ 512
+$cbr_(36) set interval_ 0.5
+$cbr_(36) set random_ 1
+$cbr_(36) set maxpkts_ 10000
+$cbr_(36) attach-agent $udp_(36)
+$ns_ connect $udp_(36) $null_(36)
+$ns_ at 132.45129531829213 "$cbr_(36) start"
+#
+# 43 connecting to 44 at time 64.09054449018582
+#
+set udp_(37) [new Agent/UDP]
+$ns_ attach-agent $node_(43) $udp_(37)
+set null_(37) [new Agent/Null]
+$ns_ attach-agent $node_(44) $null_(37)
+set cbr_(37) [new Application/Traffic/CBR]
+$cbr_(37) set packetSize_ 512
+$cbr_(37) set interval_ 0.5
+$cbr_(37) set random_ 1
+$cbr_(37) set maxpkts_ 10000
+$cbr_(37) attach-agent $udp_(37)
+$ns_ connect $udp_(37) $null_(37)
+$ns_ at 64.09054449018582 "$cbr_(37) start"
+#
+# 43 connecting to 45 at time 100.5135456661291
+#
+set udp_(38) [new Agent/UDP]
+$ns_ attach-agent $node_(43) $udp_(38)
+set null_(38) [new Agent/Null]
+$ns_ attach-agent $node_(45) $null_(38)
+set cbr_(38) [new Application/Traffic/CBR]
+$cbr_(38) set packetSize_ 512
+$cbr_(38) set interval_ 0.5
+$cbr_(38) set random_ 1
+$cbr_(38) set maxpkts_ 10000
+$cbr_(38) attach-agent $udp_(38)
+$ns_ connect $udp_(38) $null_(38)
+$ns_ at 100.5135456661291 "$cbr_(38) start"
+#
+# 44 connecting to 45 at time 141.0795085137149
+#
+set udp_(39) [new Agent/UDP]
+$ns_ attach-agent $node_(44) $udp_(39)
+set null_(39) [new Agent/Null]
+$ns_ attach-agent $node_(45) $null_(39)
+set cbr_(39) [new Application/Traffic/CBR]
+$cbr_(39) set packetSize_ 512
+$cbr_(39) set interval_ 0.5
+$cbr_(39) set random_ 1
+$cbr_(39) set maxpkts_ 10000
+$cbr_(39) attach-agent $udp_(39)
+$ns_ connect $udp_(39) $null_(39)
+$ns_ at 141.0795085137149 "$cbr_(39) start"
+#
+# 44 connecting to 46 at time 119.43466429572304
+#
+set udp_(40) [new Agent/UDP]
+$ns_ attach-agent $node_(44) $udp_(40)
+set null_(40) [new Agent/Null]
+$ns_ attach-agent $node_(46) $null_(40)
+set cbr_(40) [new Application/Traffic/CBR]
+$cbr_(40) set packetSize_ 512
+$cbr_(40) set interval_ 0.5
+$cbr_(40) set random_ 1
+$cbr_(40) set maxpkts_ 10000
+$cbr_(40) attach-agent $udp_(40)
+$ns_ connect $udp_(40) $null_(40)
+$ns_ at 119.43466429572304 "$cbr_(40) start"
+#
+# 47 connecting to 48 at time 67.248692301683448
+#
+set udp_(41) [new Agent/UDP]
+$ns_ attach-agent $node_(47) $udp_(41)
+set null_(41) [new Agent/Null]
+$ns_ attach-agent $node_(48) $null_(41)
+set cbr_(41) [new Application/Traffic/CBR]
+$cbr_(41) set packetSize_ 512
+$cbr_(41) set interval_ 0.5
+$cbr_(41) set random_ 1
+$cbr_(41) set maxpkts_ 10000
+$cbr_(41) attach-agent $udp_(41)
+$ns_ connect $udp_(41) $null_(41)
+$ns_ at 67.248692301683448 "$cbr_(41) start"
+#
+# 51 connecting to 52 at time 164.14905633039263
+#
+set udp_(42) [new Agent/UDP]
+$ns_ attach-agent $node_(51) $udp_(42)
+set null_(42) [new Agent/Null]
+$ns_ attach-agent $node_(52) $null_(42)
+set cbr_(42) [new Application/Traffic/CBR]
+$cbr_(42) set packetSize_ 512
+$cbr_(42) set interval_ 0.5
+$cbr_(42) set random_ 1
+$cbr_(42) set maxpkts_ 10000
+$cbr_(42) attach-agent $udp_(42)
+$ns_ connect $udp_(42) $null_(42)
+$ns_ at 164.14905633039263 "$cbr_(42) start"
+#
+# 57 connecting to 58 at time 158.39921391494536
+#
+set udp_(43) [new Agent/UDP]
+$ns_ attach-agent $node_(57) $udp_(43)
+set null_(43) [new Agent/Null]
+$ns_ attach-agent $node_(58) $null_(43)
+set cbr_(43) [new Application/Traffic/CBR]
+$cbr_(43) set packetSize_ 512
+$cbr_(43) set interval_ 0.5
+$cbr_(43) set random_ 1
+$cbr_(43) set maxpkts_ 10000
+$cbr_(43) attach-agent $udp_(43)
+$ns_ connect $udp_(43) $null_(43)
+$ns_ at 158.39921391494536 "$cbr_(43) start"
+#
+# 57 connecting to 59 at time 145.04973056029982
+#
+set udp_(44) [new Agent/UDP]
+$ns_ attach-agent $node_(57) $udp_(44)
+set null_(44) [new Agent/Null]
+$ns_ attach-agent $node_(59) $null_(44)
+set cbr_(44) [new Application/Traffic/CBR]
+$cbr_(44) set packetSize_ 512
+$cbr_(44) set interval_ 0.5
+$cbr_(44) set random_ 1
+$cbr_(44) set maxpkts_ 10000
+$cbr_(44) attach-agent $udp_(44)
+$ns_ connect $udp_(44) $null_(44)
+$ns_ at 145.04973056029982 "$cbr_(44) start"
+#
+# 60 connecting to 61 at time 110.76419231051774
+#
+set udp_(45) [new Agent/UDP]
+$ns_ attach-agent $node_(60) $udp_(45)
+set null_(45) [new Agent/Null]
+$ns_ attach-agent $node_(61) $null_(45)
+set cbr_(45) [new Application/Traffic/CBR]
+$cbr_(45) set packetSize_ 512
+$cbr_(45) set interval_ 0.5
+$cbr_(45) set random_ 1
+$cbr_(45) set maxpkts_ 10000
+$cbr_(45) attach-agent $udp_(45)
+$ns_ connect $udp_(45) $null_(45)
+$ns_ at 110.76419231051774 "$cbr_(45) start"
+#
+# 60 connecting to 62 at time 142.13310670206934
+#
+set udp_(46) [new Agent/UDP]
+$ns_ attach-agent $node_(60) $udp_(46)
+set null_(46) [new Agent/Null]
+$ns_ attach-agent $node_(62) $null_(46)
+set cbr_(46) [new Application/Traffic/CBR]
+$cbr_(46) set packetSize_ 512
+$cbr_(46) set interval_ 0.5
+$cbr_(46) set random_ 1
+$cbr_(46) set maxpkts_ 10000
+$cbr_(46) attach-agent $udp_(46)
+$ns_ connect $udp_(46) $null_(46)
+$ns_ at 142.13310670206934 "$cbr_(46) start"
+#
+# 61 connecting to 62 at time 81.227061469679256
+#
+set udp_(47) [new Agent/UDP]
+$ns_ attach-agent $node_(61) $udp_(47)
+set null_(47) [new Agent/Null]
+$ns_ attach-agent $node_(62) $null_(47)
+set cbr_(47) [new Application/Traffic/CBR]
+$cbr_(47) set packetSize_ 512
+$cbr_(47) set interval_ 0.5
+$cbr_(47) set random_ 1
+$cbr_(47) set maxpkts_ 10000
+$cbr_(47) attach-agent $udp_(47)
+$ns_ connect $udp_(47) $null_(47)
+$ns_ at 81.227061469679256 "$cbr_(47) start"
+#
+# 68 connecting to 69 at time 38.547365115279035
+#
+set udp_(48) [new Agent/UDP]
+$ns_ attach-agent $node_(68) $udp_(48)
+set null_(48) [new Agent/Null]
+$ns_ attach-agent $node_(69) $null_(48)
+set cbr_(48) [new Application/Traffic/CBR]
+$cbr_(48) set packetSize_ 512
+$cbr_(48) set interval_ 0.5
+$cbr_(48) set random_ 1
+$cbr_(48) set maxpkts_ 10000
+$cbr_(48) attach-agent $udp_(48)
+$ns_ connect $udp_(48) $null_(48)
+$ns_ at 38.547365115279035 "$cbr_(48) start"
+#
+# 68 connecting to 70 at time 77.472871913329172
+#
+set udp_(49) [new Agent/UDP]
+$ns_ attach-agent $node_(68) $udp_(49)
+set null_(49) [new Agent/Null]
+$ns_ attach-agent $node_(70) $null_(49)
+set cbr_(49) [new Application/Traffic/CBR]
+$cbr_(49) set packetSize_ 512
+$cbr_(49) set interval_ 0.5
+$cbr_(49) set random_ 1
+$cbr_(49) set maxpkts_ 10000
+$cbr_(49) attach-agent $udp_(49)
+$ns_ connect $udp_(49) $null_(49)
+$ns_ at 77.472871913329172 "$cbr_(49) start"
+#
+# 71 connecting to 72 at time 87.25933697412691
+#
+set udp_(50) [new Agent/UDP]
+$ns_ attach-agent $node_(71) $udp_(50)
+set null_(50) [new Agent/Null]
+$ns_ attach-agent $node_(72) $null_(50)
+set cbr_(50) [new Application/Traffic/CBR]
+$cbr_(50) set packetSize_ 512
+$cbr_(50) set interval_ 0.5
+$cbr_(50) set random_ 1
+$cbr_(50) set maxpkts_ 10000
+$cbr_(50) attach-agent $udp_(50)
+$ns_ connect $udp_(50) $null_(50)
+$ns_ at 87.25933697412691 "$cbr_(50) start"
+#
+# 72 connecting to 73 at time 112.12017905531461
+#
+set udp_(51) [new Agent/UDP]
+$ns_ attach-agent $node_(72) $udp_(51)
+set null_(51) [new Agent/Null]
+$ns_ attach-agent $node_(73) $null_(51)
+set cbr_(51) [new Application/Traffic/CBR]
+$cbr_(51) set packetSize_ 512
+$cbr_(51) set interval_ 0.5
+$cbr_(51) set random_ 1
+$cbr_(51) set maxpkts_ 10000
+$cbr_(51) attach-agent $udp_(51)
+$ns_ connect $udp_(51) $null_(51)
+$ns_ at 112.12017905531461 "$cbr_(51) start"
+#
+# 72 connecting to 74 at time 153.14090390370271
+#
+set udp_(52) [new Agent/UDP]
+$ns_ attach-agent $node_(72) $udp_(52)
+set null_(52) [new Agent/Null]
+$ns_ attach-agent $node_(74) $null_(52)
+set cbr_(52) [new Application/Traffic/CBR]
+$cbr_(52) set packetSize_ 512
+$cbr_(52) set interval_ 0.5
+$cbr_(52) set random_ 1
+$cbr_(52) set maxpkts_ 10000
+$cbr_(52) attach-agent $udp_(52)
+$ns_ connect $udp_(52) $null_(52)
+$ns_ at 153.14090390370271 "$cbr_(52) start"
+#
+# 77 connecting to 78 at time 7.1106371037245903
+#
+set udp_(53) [new Agent/UDP]
+$ns_ attach-agent $node_(77) $udp_(53)
+set null_(53) [new Agent/Null]
+$ns_ attach-agent $node_(78) $null_(53)
+set cbr_(53) [new Application/Traffic/CBR]
+$cbr_(53) set packetSize_ 512
+$cbr_(53) set interval_ 0.5
+$cbr_(53) set random_ 1
+$cbr_(53) set maxpkts_ 10000
+$cbr_(53) attach-agent $udp_(53)
+$ns_ connect $udp_(53) $null_(53)
+$ns_ at 7.1106371037245903 "$cbr_(53) start"
+#
+# 77 connecting to 79 at time 104.13022180280193
+#
+set udp_(54) [new Agent/UDP]
+$ns_ attach-agent $node_(77) $udp_(54)
+set null_(54) [new Agent/Null]
+$ns_ attach-agent $node_(79) $null_(54)
+set cbr_(54) [new Application/Traffic/CBR]
+$cbr_(54) set packetSize_ 512
+$cbr_(54) set interval_ 0.5
+$cbr_(54) set random_ 1
+$cbr_(54) set maxpkts_ 10000
+$cbr_(54) attach-agent $udp_(54)
+$ns_ connect $udp_(54) $null_(54)
+$ns_ at 104.13022180280193 "$cbr_(54) start"
+#
+# 78 connecting to 79 at time 40.829525255053085
+#
+set udp_(55) [new Agent/UDP]
+$ns_ attach-agent $node_(78) $udp_(55)
+set null_(55) [new Agent/Null]
+$ns_ attach-agent $node_(79) $null_(55)
+set cbr_(55) [new Application/Traffic/CBR]
+$cbr_(55) set packetSize_ 512
+$cbr_(55) set interval_ 0.5
+$cbr_(55) set random_ 1
+$cbr_(55) set maxpkts_ 10000
+$cbr_(55) attach-agent $udp_(55)
+$ns_ connect $udp_(55) $null_(55)
+$ns_ at 40.829525255053085 "$cbr_(55) start"
+#
+# 79 connecting to 80 at time 10.565625154676674
+#
+set udp_(56) [new Agent/UDP]
+$ns_ attach-agent $node_(79) $udp_(56)
+set null_(56) [new Agent/Null]
+$ns_ attach-agent $node_(80) $null_(56)
+set cbr_(56) [new Application/Traffic/CBR]
+$cbr_(56) set packetSize_ 512
+$cbr_(56) set interval_ 0.5
+$cbr_(56) set random_ 1
+$cbr_(56) set maxpkts_ 10000
+$cbr_(56) attach-agent $udp_(56)
+$ns_ connect $udp_(56) $null_(56)
+$ns_ at 10.565625154676674 "$cbr_(56) start"
+#
+# 79 connecting to 81 at time 61.193042770583666
+#
+set udp_(57) [new Agent/UDP]
+$ns_ attach-agent $node_(79) $udp_(57)
+set null_(57) [new Agent/Null]
+$ns_ attach-agent $node_(81) $null_(57)
+set cbr_(57) [new Application/Traffic/CBR]
+$cbr_(57) set packetSize_ 512
+$cbr_(57) set interval_ 0.5
+$cbr_(57) set random_ 1
+$cbr_(57) set maxpkts_ 10000
+$cbr_(57) attach-agent $udp_(57)
+$ns_ connect $udp_(57) $null_(57)
+$ns_ at 61.193042770583666 "$cbr_(57) start"
+#
+# 80 connecting to 81 at time 114.67429783878583
+#
+set udp_(58) [new Agent/UDP]
+$ns_ attach-agent $node_(80) $udp_(58)
+set null_(58) [new Agent/Null]
+$ns_ attach-agent $node_(81) $null_(58)
+set cbr_(58) [new Application/Traffic/CBR]
+$cbr_(58) set packetSize_ 512
+$cbr_(58) set interval_ 0.5
+$cbr_(58) set random_ 1
+$cbr_(58) set maxpkts_ 10000
+$cbr_(58) attach-agent $udp_(58)
+$ns_ connect $udp_(58) $null_(58)
+$ns_ at 114.67429783878583 "$cbr_(58) start"
+#
+# 80 connecting to 82 at time 78.013853606774404
+#
+set udp_(59) [new Agent/UDP]
+$ns_ attach-agent $node_(80) $udp_(59)
+set null_(59) [new Agent/Null]
+$ns_ attach-agent $node_(82) $null_(59)
+set cbr_(59) [new Application/Traffic/CBR]
+$cbr_(59) set packetSize_ 512
+$cbr_(59) set interval_ 0.5
+$cbr_(59) set random_ 1
+$cbr_(59) set maxpkts_ 10000
+$cbr_(59) attach-agent $udp_(59)
+$ns_ connect $udp_(59) $null_(59)
+$ns_ at 78.013853606774404 "$cbr_(59) start"
+#
+#Total sources/connections: 37/60
+#

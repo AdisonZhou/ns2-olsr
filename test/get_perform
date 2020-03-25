@@ -1,0 +1,46 @@
+#!/bin/sh
+#rm temp_*
+
+j=3
+i=370
+while [ "$j" -le 20 ]; do
+
+while [ "$i" -le 600 ]; do
+	ns olsr.tcl $i
+	ns aolsr.tcl $i
+	ns bolsr.tcl $i
+	gawk -f delay.awk rate=$i olsr.tr >>temp_delay_olsr
+	gawk -f delay.awk rate=$i aolsr.tr >>temp_delay_aolsr
+	gawk -f delay.awk rate=$i bolsr.tr >>temp_delay_bolsr
+	gawk -f lose_rate.awk rate=$i olsr.tr >>temp_loss_rate_olsr
+	gawk -f lose_rate.awk rate=$i aolsr.tr >>temp_loss_rate_aolsr
+	gawk -f lose_rate.awk rate=$i bolsr.tr >>temp_loss_rate_bolsr
+	gawk -f throughput.awk rate=$i olsr.tr >>temp_throughtput_olsr
+	gawk -f throughput.awk rate=$i aolsr.tr >>temp_throughtput_aolsr
+	gawk -f throughput.awk rate=$i bolsr.tr >>temp_throughtput_bolsr
+	if [ "$i" -le 300 ]; then
+		i=$(($i+10))
+	elif [ "$i" -le 400 ]; then
+		i=$(($i+15))
+	else
+		i=$(($i+20))
+	fi
+done
+        i=100
+        ./setdest -n 30 -p 0 -M 0.00001 -t 120 -x 800 -y 800 >scen_test1
+        printf "finished %d\n" $j
+        j=$(($j+1))
+done
+        gawk -f get_average.awk temp_delay_olsr >>delay_olsr
+        gawk -f get_average.awk temp_delay_aolsr >>delay_aolsr
+        gawk -f get_average.awk temp_delay_bolsr >>delay_bolsr
+        gawk -f get_average.awk temp_loss_rate_olsr >>loss_rate_olsr
+        gawk -f get_average.awk temp_loss_rate_aolsr >>loss_rate_aolsr
+        gawk -f get_average.awk temp_loss_rate_bolsr >>loss_rate_bolsr
+        gawk -f get_average.awk temp_throughtput_olsr >>throughtput_olsr
+        gawk -f get_average.awk temp_throughtput_aolsr >>throughtput_aolsr
+        gawk -f get_average.awk temp_throughtput_bolsr >>throughtput_bolsr
+        #rm temp_*
+
+exit 0
+
